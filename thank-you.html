@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thank you - Payment received</title>
+<meta name="robots" content="noindex">
+<script src="config.js" charset="utf-8"></script>
+<script>
+/* Meta Pixel + Purchase event (fires only on this page) */
+if (CONFIG.pixelId && CONFIG.pixelId.indexOf("PASTE") === -1) {
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', CONFIG.pixelId);
+  fbq('track', 'PageView');
+  fbq('track', 'Purchase', { value: CONFIG.price, currency: CONFIG.currencyCode });
+}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;color:#1b2430;background:#f3f6fa;line-height:1.55;font-size:17px;text-align:center;padding:40px 18px}
+.card{max-width:520px;margin:0 auto;background:#fff;border-radius:16px;padding:30px 20px;border:1px solid #e3e8ef}
+h1{font-size:26px;margin:10px 0 14px}
+p{margin-bottom:14px}
+.btn{display:block;max-width:420px;margin:18px auto 8px;padding:16px 14px;border-radius:12px;background:#128C7E;color:#fff;font-size:19px;font-weight:bold;text-decoration:none}
+.big{font-size:54px}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="big">&#9989;</div>
+  <h1>Payment received. Thank you!</h1>
+  <p><b>Last step:</b> send your document on WhatsApp so we can start your check.</p>
+  <a class="btn" id="wa" href="#">&#128172; Send my file on WhatsApp</a>
+  <p style="font-size:14px;color:#667">Your report will be ready in about <span id="t"></span>.</p>
+</div>
+<script>
+document.getElementById("t").textContent = CONFIG.turnaround;
+document.getElementById("wa").href = "https://wa.me/" + CONFIG.whatsappNumber +
+  "?text=" + encodeURIComponent("Hi, I have paid. Here is my document.");
+</script>
+</body>
+</html>
