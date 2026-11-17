@@ -30,7 +30,7 @@ var CONFIG = {
 
   /* OPTIONAL online payment link (Flutterwave / Paystack / Selar).
      Leave as "" if customers will pay inside WhatsApp. */
-  paymentLink: "",
+  paymentLink: "https://flutterwave.com/pay/doccheck-ng",
 
   /* The first message customers send you on WhatsApp */
   whatsappMessage: "Hi, I want to check my document.",
