@@ -36,7 +36,7 @@ var CONFIG = {
 
   /* Which payment link is live right now: "flutterwave" or "paystack".
      Change this one word to switch provider. Customers never notice. */
-  paymentProvider: "paystack",
+  paymentProvider: "flutterwave",
 
   /* Paste your payment links here (the full https://... address).
      TIP: for the review offer, make the link accept ANY amount
@@ -44,7 +44,7 @@ var CONFIG = {
      Leave "" if you don't have a link yet; the Pay now buttons
      then hide automatically. */
   paymentLinks: {
-    flutterwave: "",
+    flutterwave: "https://flutterwave.com/pay/doccheck",
     paystack: "https://paystack.shop/pay/doccheck"
   },
 
