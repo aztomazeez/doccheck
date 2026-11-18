@@ -36,7 +36,7 @@ var CONFIG = {
 
   /* Which payment link is live right now: "flutterwave" or "paystack".
      Change this one word to switch provider. Customers never notice. */
-  paymentProvider: "flutterwave",
+  paymentProvider: "paystack",
 
   /* Paste your payment links here (the full https://... address).
      TIP: for the review offer, make the link accept ANY amount
@@ -45,7 +45,7 @@ var CONFIG = {
      then hide automatically. */
   paymentLinks: {
     flutterwave: "",
-    paystack: ""
+    paystack: "https://paystack.shop/pay/doccheck-review"
   },
 
   /* Text on the payment button */
@@ -95,7 +95,7 @@ var CONFIG = {
       turnaround: "24 hours",
 
       /* Used for Meta tracking: roughly what an average order is worth */
-      purchaseValue: 10,
+      purchaseValue: 9.99,
 
       /* Message that opens in WhatsApp when someone taps the green button */
       whatsappMessage: "Hi, I would like a human document review with the free Turnitin reports. I will send my document now.",
@@ -155,14 +155,14 @@ var CONFIG = {
 
       /* Price */
       priceLabel: "Starting at",
-      priceValue: "$10",
+      priceValue: "$9.99",
       priceNote: "Final price depends on your document's page count and complexity. You see your exact quote before you pay.",
 
       /* Optional price guide. Set showPriceGuide to true ONLY after you
          have changed these example prices to your real prices. */
       showPriceGuide: false,
       priceGuide: [
-        { label: "Up to 10 pages", price: "$10" },
+        { label: "Up to 10 pages", price: "$9.99" },
         { label: "11 to 30 pages", price: "$20" },
         { label: "31 to 60 pages", price: "$35" },
         { label: "Over 60 pages", price: "Custom quote" }
