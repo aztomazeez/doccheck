@@ -45,7 +45,7 @@ var CONFIG = {
      then hide automatically. */
   paymentLinks: {
     flutterwave: "",
-    paystack: "https://paystack.shop/pay/doccheck-review"
+    paystack: "https://paystack.shop/pay/doccheck"
   },
 
   /* Text on the payment button */
